@@ -1,0 +1,47 @@
+client:
+  name: basic
+  file-system: device-agnostic
+tools: {}
+targets:
+  "PackageStructure": ["<PackageStructure>"]
+  "ios-voice-processor-debug.module": ["<ios-voice-processor-debug.module>"]
+  "main": ["<ios-voice-processor-debug.module>"]
+  "test": ["<ios-voice-processor-debug.module>"]
+default: "main"
+nodes:
+  "/Users/shohan.ahmed/iOS/library/ios-voice-processor/":
+    is-directory-structure: true
+    content-exclusion-patterns: [".git",".build"]
+commands:
+  "/Users/shohan.ahmed/iOS/library/ios-voice-processor/.build/arm64-apple-macosx/debug/ios_voice_processor.build/sources":
+    tool: write-auxiliary-file
+    inputs: ["<sources-file-list>","/Users/shohan.ahmed/iOS/library/ios-voice-processor/VoiceProcessor.swift","/Users/shohan.ahmed/iOS/library/ios-voice-processor/VoiceProcessorBuffer.swift","/Users/shohan.ahmed/iOS/library/ios-voice-processor/VoiceProcessorErrors.swift"]
+    outputs: ["/Users/shohan.ahmed/iOS/library/ios-voice-processor/.build/arm64-apple-macosx/debug/ios_voice_processor.build/sources"]
+    description: "Write auxiliary file /Users/shohan.ahmed/iOS/library/ios-voice-processor/.build/arm64-apple-macosx/debug/ios_voice_processor.build/sources"
+
+  "/Users/shohan.ahmed/iOS/library/ios-voice-processor/.build/arm64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt":
+    tool: write-auxiliary-file
+    inputs: ["<swift-get-version>","/Library/Developer/CommandLineTools/usr/bin/swiftc"]
+    outputs: ["/Users/shohan.ahmed/iOS/library/ios-voice-processor/.build/arm64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt"]
+    always-out-of-date: "true"
+    description: "Write auxiliary file /Users/shohan.ahmed/iOS/library/ios-voice-processor/.build/arm64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt"
+
+  "<ios-voice-processor-debug.module>":
+    tool: phony
+    inputs: ["/Users/shohan.ahmed/iOS/library/ios-voice-processor/.build/arm64-apple-macosx/debug/ios_voice_processor.build/VoiceProcessor.swift.o","/Users/shohan.ahmed/iOS/library/ios-voice-processor/.build/arm64-apple-macosx/debug/ios_voice_processor.build/VoiceProcessorBuffer.swift.o","/Users/shohan.ahmed/iOS/library/ios-voice-processor/.build/arm64-apple-macosx/debug/ios_voice_processor.build/VoiceProcessorErrors.swift.o","/Users/shohan.ahmed/iOS/library/ios-voice-processor/.build/arm64-apple-macosx/debug/ios_voice_processor.swiftmodule"]
+    outputs: ["<ios-voice-processor-debug.module>"]
+
+  "C.ios-voice-processor-debug.module":
+    tool: shell
+    inputs: ["/Users/shohan.ahmed/iOS/library/ios-voice-processor/VoiceProcessor.swift","/Users/shohan.ahmed/iOS/library/ios-voice-processor/VoiceProcessorBuffer.swift","/Users/shohan.ahmed/iOS/library/ios-voice-processor/VoiceProcessorErrors.swift","/Users/shohan.ahmed/iOS/library/ios-voice-processor/.build/arm64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt","/Users/shohan.ahmed/iOS/library/ios-voice-processor/.build/arm64-apple-macosx/debug/ios_voice_processor.build/sources"]
+    outputs: ["/Users/shohan.ahmed/iOS/library/ios-voice-processor/.build/arm64-apple-macosx/debug/ios_voice_processor.build/VoiceProcessor.swift.o","/Users/shohan.ahmed/iOS/library/ios-voice-processor/.build/arm64-apple-macosx/debug/ios_voice_processor.build/VoiceProcessorBuffer.swift.o","/Users/shohan.ahmed/iOS/library/ios-voice-processor/.build/arm64-apple-macosx/debug/ios_voice_processor.build/VoiceProcessorErrors.swift.o","/Users/shohan.ahmed/iOS/library/ios-voice-processor/.build/arm64-apple-macosx/debug/ios_voice_processor.swiftmodule"]
+    description: "Compiling Swift Module 'ios_voice_processor' (3 sources)"
+    args: ["/Library/Developer/CommandLineTools/usr/bin/swiftc","-module-name","ios_voice_processor","-emit-dependencies","-emit-module","-emit-module-path","/Users/shohan.ahmed/iOS/library/ios-voice-processor/.build/arm64-apple-macosx/debug/ios_voice_processor.swiftmodule","-output-file-map","/Users/shohan.ahmed/iOS/library/ios-voice-processor/.build/arm64-apple-macosx/debug/ios_voice_processor.build/output-file-map.json","-parse-as-library","-incremental","-c","@/Users/shohan.ahmed/iOS/library/ios-voice-processor/.build/arm64-apple-macosx/debug/ios_voice_processor.build/sources","-I","/Users/shohan.ahmed/iOS/library/ios-voice-processor/.build/arm64-apple-macosx/debug","-target","arm64-apple-macosx10.13","-swift-version","5","-enable-batch-mode","-index-store-path","/Users/shohan.ahmed/iOS/library/ios-voice-processor/.build/arm64-apple-macosx/debug/index/store","-Onone","-enable-testing","-j8","-DSWIFT_PACKAGE","-DDEBUG","-module-cache-path","/Users/shohan.ahmed/iOS/library/ios-voice-processor/.build/arm64-apple-macosx/debug/ModuleCache","-parseable-output","-parse-as-library","-emit-objc-header","-emit-objc-header-path","/Users/shohan.ahmed/iOS/library/ios-voice-processor/.build/arm64-apple-macosx/debug/ios_voice_processor.build/ios-voice-processor-Swift.h","-color-diagnostics","-sdk","/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk","-g","-Xcc","-isysroot","-Xcc","/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk","-Xcc","-fPIC","-Xcc","-g"]
+
+  "PackageStructure":
+    tool: package-structure-tool
+    inputs: ["/Users/shohan.ahmed/iOS/library/ios-voice-processor/","/Users/shohan.ahmed/iOS/library/ios-voice-processor/Package.swift","/Users/shohan.ahmed/iOS/library/ios-voice-processor/Package.resolved"]
+    outputs: ["<PackageStructure>"]
+    description: "Planning build"
+    allow-missing-inputs: true
+

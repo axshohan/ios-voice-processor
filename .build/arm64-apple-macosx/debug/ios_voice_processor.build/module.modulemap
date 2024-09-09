@@ -1,0 +1,4 @@
+module ios_voice_processor {
+    header "/Users/shohan.ahmed/iOS/library/ios-voice-processor/.build/arm64-apple-macosx/debug/ios_voice_processor.build/ios-voice-processor-Swift.h"
+    requires objc
+}

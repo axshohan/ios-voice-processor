@@ -1,0 +1,23 @@
+{
+  "": {
+    "swift-dependencies": "/Users/shohan.ahmed/iOS/library/ios-voice-processor/.build/arm64-apple-macosx/debug/ios_voice_processor.build/master.swiftdeps"
+  },
+  "/Users/shohan.ahmed/iOS/library/ios-voice-processor/VoiceProcessor.swift": {
+    "dependencies": "/Users/shohan.ahmed/iOS/library/ios-voice-processor/.build/arm64-apple-macosx/debug/ios_voice_processor.build/VoiceProcessor.d",
+    "object": "/Users/shohan.ahmed/iOS/library/ios-voice-processor/.build/arm64-apple-macosx/debug/ios_voice_processor.build/VoiceProcessor.swift.o",
+    "swiftmodule": "/Users/shohan.ahmed/iOS/library/ios-voice-processor/.build/arm64-apple-macosx/debug/ios_voice_processor.build/VoiceProcessor~partial.swiftmodule",
+    "swift-dependencies": "/Users/shohan.ahmed/iOS/library/ios-voice-processor/.build/arm64-apple-macosx/debug/ios_voice_processor.build/VoiceProcessor.swiftdeps"
+  },
+  "/Users/shohan.ahmed/iOS/library/ios-voice-processor/VoiceProcessorBuffer.swift": {
+    "dependencies": "/Users/shohan.ahmed/iOS/library/ios-voice-processor/.build/arm64-apple-macosx/debug/ios_voice_processor.build/VoiceProcessorBuffer.d",
+    "object": "/Users/shohan.ahmed/iOS/library/ios-voice-processor/.build/arm64-apple-macosx/debug/ios_voice_processor.build/VoiceProcessorBuffer.swift.o",
+    "swiftmodule": "/Users/shohan.ahmed/iOS/library/ios-voice-processor/.build/arm64-apple-macosx/debug/ios_voice_processor.build/VoiceProcessorBuffer~partial.swiftmodule",
+    "swift-dependencies": "/Users/shohan.ahmed/iOS/library/ios-voice-processor/.build/arm64-apple-macosx/debug/ios_voice_processor.build/VoiceProcessorBuffer.swiftdeps"
+  },
+  "/Users/shohan.ahmed/iOS/library/ios-voice-processor/VoiceProcessorErrors.swift": {
+    "dependencies": "/Users/shohan.ahmed/iOS/library/ios-voice-processor/.build/arm64-apple-macosx/debug/ios_voice_processor.build/VoiceProcessorErrors.d",
+    "object": "/Users/shohan.ahmed/iOS/library/ios-voice-processor/.build/arm64-apple-macosx/debug/ios_voice_processor.build/VoiceProcessorErrors.swift.o",
+    "swiftmodule": "/Users/shohan.ahmed/iOS/library/ios-voice-processor/.build/arm64-apple-macosx/debug/ios_voice_processor.build/VoiceProcessorErrors~partial.swiftmodule",
+    "swift-dependencies": "/Users/shohan.ahmed/iOS/library/ios-voice-processor/.build/arm64-apple-macosx/debug/ios_voice_processor.build/VoiceProcessorErrors.swiftdeps"
+  }
+}

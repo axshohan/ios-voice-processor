@@ -1,0 +1,7 @@
+version: "Apple Swift version 5.10 (swiftlang-5.10.0.13 clang-1500.3.9.4)"
+options: "5f03f5503f0fa2f8f6351e5b5c25ef44"
+build_time: [1725905518, 396605000]
+inputs:
+  "/Users/shohan.ahmed/iOS/library/ios-voice-processor/VoiceProcessor.swift": !dirty [1725899856, 236499985]
+  "/Users/shohan.ahmed/iOS/library/ios-voice-processor/VoiceProcessorBuffer.swift": !dirty [1725899856, 236656194]
+  "/Users/shohan.ahmed/iOS/library/ios-voice-processor/VoiceProcessorErrors.swift": !dirty [1725899856, 236826028]
